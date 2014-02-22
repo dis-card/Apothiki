@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13930095875510" configfile="/Apothiki/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index" id="pf13931037840140" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf13931037840141" path="/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="secure/welcome" id="pf13931037840152" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf13931037840141" path="/secure/welcome.jsp"/>
+  <links id="pf13931037840141" target="pf13931037840152" source="pf13931037840140" outcome="welcome"/>
+</pageflow:Pageflow>
