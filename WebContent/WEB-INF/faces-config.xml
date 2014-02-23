@@ -11,17 +11,33 @@
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	
+	<managed-bean>
+		<managed-bean-name>home</managed-bean-name>
+		<managed-bean-class>in.darkstars.backingbean.HomeBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
 	<navigation-rule>
 		<from-view-id>/index.jsp</from-view-id>
 		<navigation-case>
 			<from-outcome>success</from-outcome>
-			<to-view-id>/secure/welcome.jsp</to-view-id>
+			<to-view-id>/secure/home.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>failure</from-outcome>
 			<to-view-id>/index.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+	
+	<navigation-rule>
+	    <from-view-id>/secure/home.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>logout</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+	
 	<application>
 		<resource-bundle>
 			<base-name>message</base-name>

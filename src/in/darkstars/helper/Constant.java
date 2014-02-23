@@ -16,5 +16,6 @@ public class Constant {
 	public static final String GETUSERQUERY = "select username from user where username=? and password=?";
 	public static final String DATASOURCEEXCEPTIONMESSAGE = "Problem in initializing the data source, please contact customer care services";
 	public static final String FAILURE = "failure";
+	public static final String LOGOUT = "logout";
 
 }

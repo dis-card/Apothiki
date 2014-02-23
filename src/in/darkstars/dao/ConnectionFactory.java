@@ -33,9 +33,14 @@ public class ConnectionFactory {
 					if ( ctx == null )
 						ctx = new InitialContext();
 				}
-			}
+			}			
 			if ( ds == null )
-				ds = (DataSource) ctx.lookup(Constant.DATASOURCE);
+			{
+				synchronized (DataSource.class) {
+					if (ds == null)
+						ds = (DataSource) ctx.lookup(Constant.DATASOURCE);					
+				}
+			}
 			con = ds.getConnection();
 			
 		}

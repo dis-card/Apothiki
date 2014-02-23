@@ -64,7 +64,7 @@ public class LoginBean {
 	 */
 	public void setPassword(String password) {
 		if (password != null)
-			password.trim();
+			password = password.trim();
 		this.password = password;
 	}
 	
