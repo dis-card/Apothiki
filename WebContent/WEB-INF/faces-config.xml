@@ -14,8 +14,12 @@
 	<navigation-rule>
 		<from-view-id>/index.jsp</from-view-id>
 		<navigation-case>
-			<from-outcome>welcome</from-outcome>
+			<from-outcome>success</from-outcome>
 			<to-view-id>/secure/welcome.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<application>
